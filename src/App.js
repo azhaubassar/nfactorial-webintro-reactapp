@@ -47,6 +47,7 @@ function Person(props) {
     <div>
       <h1>My name is {props.name} </h1>
       <a href={props.link}> </a>
+      <img src={props.image}/>
     </div>
   )
 }
@@ -62,15 +63,18 @@ function App() {
   const users = [
     {
       name:'Aruzhan',
-      link: 'inst.com'
+      link: 'inst.com',
+      image: ''
     },
     {
       name:'Sake',
-      link: 'inst.com'
+      link: 'inst.com',
+      image: ''
     },
     {
       name:'Dalida',
-      link: 'inst.com'
+      link: 'inst.com',
+      image: 'путь'
     }
   ]
 
@@ -78,7 +82,7 @@ function App() {
     <div className="App">
       <Header/>
 
-      {users.map((user, index)=><Person key={index} name={user.name} link={user.link}/>)}
+      {users.map((user, index)=><Person key={index} name={user.name} link={user.link} image={user.image}/>)}
       {/* {users.map(function(user, index){
         return <Person key={index} name={user.name} link={user.link}/>
       })} */}
